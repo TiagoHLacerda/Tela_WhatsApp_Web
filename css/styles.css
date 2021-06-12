@@ -1,0 +1,171 @@
+/* reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Segoe UI", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Variaveis */
+
+:root {
+    --background-green: #009688;
+    --background-beige: #d7dbd6;
+    --sidebar-header: #ededed;
+    --notifications-text-color: rgba(48, 48, 48, 0.96);
+    --notifications-link-color: rgba(48, 48, 48, 0.85);
+    --notifications-background-color: #9de1fe;
+    --search-bar-bg: #f6f6f6;
+    --white: #ffffff;
+    --text-gray: #919191;
+    --chat-border: #ededed;
+    --whatsapp-green: #3ccc2f;
+    --scrollbar-color: #cccccc;
+    --chat-window-scrollbar-color: #bab3ae;
+    --box-shadow-color: #d5d5d5;
+    --chat-hover-color: #f5f5f5;
+    --chat-active-color: #ebebeb;
+    --chat-window-beige: #e5ddd5;
+    --sender-message-green: #dcf8c6;
+    --type-message-bar: #f0f0f0;
+}
+
+/* Main Grid */
+
+.grid {
+    display: grid;
+    height: 100%;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 12.8rem 1fr;
+}
+
+/*
+ Fundo da aplicação
+*/
+
+.top {
+    background: var(--background-green);
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+}
+
+.bottom {
+    background: var(--background-beige);
+    grid-column: 1 / -1;
+    grid-row: 2 / -1;
+}
+
+/* Aplicação */
+
+.app {
+    /* display: flex; */
+   
+    display: grid;
+    grid-template-columns: 42rem 1fr;
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    /* max-width: 100%; */
+     width: 139.6rem; 
+    /* margin: 0; */
+    margin: 2rem auto;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 1rem 0.05rem rgba(0, 0, 0, 0.2);
+}
+
+/*
+ Barra lateral
+*/
+
+.sidebar {
+   /* display: flex; */
+    grid-column: 1 / 2;
+    background: var(--white);
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+/* Cabeçalho da barra lateral */
+.sidebar-header {
+    background: var(--sidebar-header);
+    display: flex;
+    justify-content:space-between;
+    height: 6rem;
+    padding: 1rem 2rem;
+}
+/* Imagem de perfil */
+.sidebar-header > img {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .sidebar-header-icons {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: flex-end;
+    cursor: pointer;
+  }
+ 
+  .sidebar-header-icons img:active {
+    /* cursor: pointer; */
+    background: var(--box-shadow-color);
+    border-radius: 50%;
+    box-shadow: 0 0 1px 8px var(--box-shadow-color);
+  }
+  /* Adicionar margens aos icones do cabeçalho da barra lateral  */
+  .sidebar-header-icons img:nth-child(2) {
+    margin: 0 3rem;
+  }
+
+  /* Notificações da barra lateral */
+  .sidebar-notifications {
+    display: flex;
+    align-items: center;
+    background: var(--notifications-background-color);
+    height: 9rem;
+    padding: 0 2rem;
+    cursor: pointer;
+  }
+  .sidebar-notifications > img {
+    margin-right: 2rem;
+  }
+  
+  .sidebar-notifications-message {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  
+  .sidebar-notifications-message span {
+    font-size: 1.6rem;
+    color: var(--notifications-text-color);
+  }
+  
+  .sidebar-notifications-message a {
+    font-size: 1.4rem;
+    color: var(--notifications-link-color);
+  }
+  
+  .sidebar-notifications-message img {
+    vertical-align: middle;
+  }
+  
+  .sidebar-notifications-message a:hover {
+    text-decoration: underline;
+  }
